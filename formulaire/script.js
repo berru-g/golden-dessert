@@ -44,7 +44,7 @@ form.addEventListener("submit", async (e) => {
       icon: "success",
       title: "Message envoyé !",
       text: "Vous allez être redirigé dans un instant...",
-      timer: 2500,
+      timer: 2000,
       showConfirmButton: false,
     }).then(() => {
       window.location.href = redirectURL
