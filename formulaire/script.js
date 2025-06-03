@@ -1,7 +1,7 @@
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 
-const supabaseUrl = "https://TON-PROJET.supabase.co"
-const supabaseKey = "ta-anon-key"
+const supabaseUrl = "https://jcquyvoijndgbhqwccbx.supabase.co"
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpjcXV5dm9pam5kZ2JocXdjY2J4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg5NTgyODksImV4cCI6MjA2NDUzNDI4OX0.a4l3jwBt3AEdhpMT6qfzIA1SlmX29NiCWWto1DvysqI"
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const form = document.getElementById("contactForm")
