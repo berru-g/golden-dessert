@@ -11,11 +11,7 @@
 </head>
 
 <body>
-    <form action="https://formspree.io/f/mjkrbalj" method="POST" class="contact-form">
-        <input type="email" name="email" placeholder="Ton mail" required>
-        <textarea name="message" placeholder="Un bug à me signaler ?" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
+
     <!--<form id="contactForm">
         <img src="../golden-dessert-logo.png">
         <h2>Contactez-nous</h2>
@@ -46,9 +42,18 @@
 
         <button type="submit">Envoyer</button>
     </form>-->
-
+    <form action="https://formspree.io/f/mjkrbalj" method="POST" class="contact-form">
+        <img src="../golden-dessert-logo.png">
+        <h2>Contactez-nous</h2>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Votre mail" required>
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Votre message." required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <br>
     <div class="return-link">
-        <h2><a href="../index.html">← Revenir au site</a></h2>
+        <h2 style="margin-top:20px;font-size:1rem;"><a href="../index.html">← Revenir au site</a></h2>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

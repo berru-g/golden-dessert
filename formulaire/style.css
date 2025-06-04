@@ -15,7 +15,7 @@
 }
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #242424;
+    background: #000000;
     display: flex;
     justify-content: center;
     padding: 50px;
@@ -94,5 +94,6 @@ button:hover {
 }
 
 .return-link a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    transform: scale(0.7);
 }
