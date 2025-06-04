@@ -5,13 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulaire de contact</title>
+    <meta name="solana-wallet" content="none">
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    <form id="contactForm">
+    <form action="https://formspree.io/f/mjkrbalj" method="POST" class="contact-form">
+        <input type="email" name="email" placeholder="Ton mail" required>
+        <textarea name="message" placeholder="Un bug à me signaler ?" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <!--<form id="contactForm">
         <img src="../golden-dessert-logo.png">
         <h2>Contactez-nous</h2>
         <p style="text-align: center; color:white;">Et recevez le catalogue automatiquement.</p>
@@ -22,13 +27,6 @@
         <label for="fullname">Nom complet</label>
         <input type="text" id="fullname" placeholder="Nom Prénom" required />
 
-        <!--<label for="statut">Statut</label>
-        <select id="statut" required>
-            <option value="">-- Choisissez un statut --</option>
-            <option value="Dirigeant">Dirigeant</option>
-            <option value="Gérant">Gérant</option>
-            <option value="Patron">Patron</option>
-        </select>-->
         <label for="statut">Vous êtes :</label>
         <select id="statut" required>
             <option value="">-- Choisissez une option --</option>
@@ -47,7 +45,7 @@
         <textarea id="message" rows="5" placeholder="Message" required></textarea>
 
         <button type="submit">Envoyer</button>
-    </form>
+    </form>-->
 
     <div class="return-link">
         <h2><a href="../index.html">← Revenir au site</a></h2>
