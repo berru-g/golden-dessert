@@ -1,6 +1,21 @@
+:root {
+    --dark-1: #121212;
+    --dark-2: #000000;
+    --dark-3: #1a1a1a;
+    --light-1: #e0e0e0;
+    --light-2: #b0b0b0;
+    --primaire: #c9a769;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #333;
+    background: #242424;
     display: flex;
     justify-content: center;
     padding: 50px;
@@ -53,9 +68,9 @@ textarea {
 button {
     margin-top: 1.5rem;
     width: 100%;
-    background: #fff;
+    background: transparent;
     border: 3px solid #c9a769;
-    color: #333;
+    color: #fff;
     padding: 1rem;
     font-size: 1rem;
     border-radius: 8px;
