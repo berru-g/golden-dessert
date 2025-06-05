@@ -44,15 +44,42 @@
   </section>
 
   <footer id="contact">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Nous contacter</h3>
-        <form action="https://formspree.io/f/mdkzkyob" method="POST" class="footer-form">
-          <input type="email" name="email" placeholder="Votre e-mail" required />
-          <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
-          <button type="submit" class="btn">Envoyer</button>
-        </form>
-      </div>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Nous contacter</h3>
+                <form action="https://formspree.io/f/mdkzkyob" method="POST" class="footer-form" id="contact-form">
+                    <input type="email" name="email" placeholder="Votre e-mail" required />
+                    <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
+            </div>
+            <script>
+                const form = document.getElementById('contact-form');
+
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault(); // Empêche l'envoi classique
+
+                    const formData = new FormData(form);
+
+                    try {
+                        const response = await fetch(form.action, {
+                            method: form.method,
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            window.location.href = "https://www.canva.com/design/DAGkHyepW1w/bZeR3AoqZLTk09F7h-HMjg/edit?utm_content=DAGkHyepW1w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // Redirige après succès
+                        } else {
+                            alert("Une erreur est survenue. Merci de réessayer.");
+                        }
+                    } catch (error) {
+                        alert("Erreur de connexion. Vérifiez votre réseau.");
+                    }
+                });
+            </script>
       <div class="footer-section">
         <h3>Coordonnées</h3>
         <p><strong>GOLDEN DESSERT</strong></p>
