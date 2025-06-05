@@ -249,7 +249,7 @@
     <script>
         window.addEventListener('load', () => {
             const loader = document.querySelector('.loader');
-            setTimeout(() => loader.classList.add('fade-out'), 1500);
+            setTimeout(() => loader.classList.add('fade-out'), 1000);
         });
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
@@ -273,6 +273,7 @@
                 document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
+        
     </script>
 </body>
 
