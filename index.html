@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!--concevoir le site comme un tunnel de vente, ajouter des preuves de qualité (avis), ajouter cta à chaque section.-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Dessert | Artisan Pâtissier</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Dessert | L'excellence sucrée pour restaurateurs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Playfair+Display:ital,wght@1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="./style.css" rel="stylesheet" />
+
 </head>
 
 <body>
+    <!-- Loader -->
+    <div class="loader">
+        <img src="./golden-dessert-logo.png" alt="Golden Dessert" />
+    </div>
 
+    <!-- Navigation -->
     <nav>
         <div class="logo-container">
-            <img src="./golden-dessert-logo.png" alt="LogoGD" class="logo-img">
-            <!--<div class="logo-text">CRÉATIONS PÂTISSIÈRES</div>-->
+            <img src="./golden-dessert-logo.png" alt="LogoGD" class="logo-img" />
         </div>
         <div class="hamburger">
             <div class="line1"></div>
@@ -25,181 +30,138 @@
             <div class="line3"></div>
         </div>
         <ul class="nav-links">
-            <!--<li><a href="#entremets">ENTREMETS/DESSERTS</a></li>-->
-            <!--<li><a href="#desserts">fff</a></li>-->
-            <li><a href="#catalogue">GALERIE</a></li>
-            <li><a href="#partenaires">PARTENAIRES</a></li>
-            <li><a href="./formulaire/index.html">CONTACT</a></li>
+            <li><a href="#produits">CATALOGUE</a></li>
+            <li><a href="#temoignages">TÉMOIGNAGES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="histoire.html">HISTOIRE</a></li>
         </ul>
     </nav>
 
-    <!-- Animation de chargement -->
-    <div class="loader">
-        <!--<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#c9a769" d="M50,10 L60,40 L90,50 L60,60 L50,90 L40,60 L10,50 L40,40 Z"/>
-        </svg>-->
-        <img src="./golden-dessert-logo.png" alt="LogoGD" class="logo-img">
-    </div>
-
-    <!-- intro Section -->
-    <section class="intro" id="home">
+    <!-- HERO SECTION -->
+    <section class="intro">
         <div class="intro-content">
             <h1>Golden Dessert</h1>
-            <p>Des desserts et entremets d'exception conçus avec des ingrédients premium et un
-                savoir-faire artisanal. Réservé aux professionels.</p>
-            <a href="./formulaire/index.html" class="btn">DEMANDER LE CATALOGUE</a>
+            <p>Des créations haut de gamme prêtes à servir pour restaurateurs exigeants</p>
+            <a href="#contact" class="btn">📥 Demander le catalogue</a>
         </div>
     </section>
 
-    <!-- Section Présentation -->
-    <section class="presentation" id="presentation">
-        <div class="presentation-img">
-            <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Pâtissier au travail">
-        </div>
+    <!-- SECTION PROBLÈME / SOLUTION -->
+    <section class="presentation">
         <div class="presentation-text">
-            <h2 class="section-title">NOTRE HISTOIRE</h2>
-            <p>Après plus de quinze années passées dans la restauration, en passant par les restaurants gastronomiques
-                et les restaurants étoilés, Nicolas FOSSÉ, diplômé aussi bien en cuisine qu’en pâtisserie et passionné
-                par son métier a fait la rencontre de Christian au sein du restaurant historique La Villa d’Or à Rezé.
-
-            <p>Après plus d’un an passé ensemble, ils sont très vite arrivés à une conclusion : le manque de personnel
-                en restauration.</p>
-
-            <p>Après longue réflexion, ils se sont demandé comment ils pouvaient aider la Restauration.
-            </p>
-            <p>Puis, après avoir eu énormément de retours positifs sur les desserts et des demandes, ils ont décidé de
-                monter un laboratoire de pâtisseries artisanales en partant d’un local vierge.
-
-                C’est ainsi que Golden dessert est né.</p>
-
-            <p>Dans cette aventure, notre équipe met en avant de nombreuses valeurs telles que excellence, partage,
-                créativité, exigence, rigueur, communication, passion, confiance, discipline.</p>
-            </p>
-            <a href="#entremets" class="btn">DÉCOUVRIR NOS ENTREMETS</a>
+            <h2 class="section-title">Un manque de main d'œuvre en cuisine ?</h2>
+            <p>Golden Dessert est né d'une réalité du terrain : le besoin croissant de solutions fiables et haut de
+                gamme pour les desserts en restauration. Notre laboratoire artisanal conçoit des entremets dignes des
+                grandes tables, prêts à l’emploi, pour vous faire gagner du temps sans compromis sur la qualité.</p>
+            <a href="#produits" class="btn">Voir des exemples concrets</a>
+        </div>
+        <div class="presentation-img">
+            <img src="https://images.unsplash.com/photo-1579634186152-f4c88e7328d8" alt="Chef pâtissier" />
         </div>
     </section>
 
-    <!-- Galerie -->
-    <section class="gallery" id="catalogue">
-        <h2 class="section-title">NOTRE CATALOGUE</h2>
+    <!-- SECTION PRODUITS -->
+    <section class="gallery" id="produits">
+        <h2 class="section-title">Quelques créations phares</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Entremet chocolat">
-                <div class="gallery-item-caption">ENTREMET "GRAND CRU"</div>
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Entremet" />
+                <div class="gallery-item-caption">Entremet Grand Cru</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Tarte aux fruits">
-                <div class="gallery-item-caption">TARTE "VERGER ROYAL"</div>
+                <img src="https://images.unsplash.com/photo-1519869325930-281384150729" alt="Éclair" />
+                <div class="gallery-item-caption">Éclair Signature</div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Macarons">
-                <div class="gallery-item-caption">COLLECTION MACARONS</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Dessert vanille">
-                <div class="gallery-item-caption">DESSERT "VANILLE MADAGASCAR"</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519869325930-281384150729?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Éclair">
-                <div class="gallery-item-caption">ÉCLAIRS SIGNATURE</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                    alt="Dessert chocolat">
-                <div class="gallery-item-caption">"CHOCOLAT PASSION"</div>
+                <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f" alt="Vanille" />
+                <div class="gallery-item-caption">Vanille Madagascar</div>
             </div>
         </div>
+        <br />
+        <a href="./formulaire/index.html" class="btn">📩 Recevoir le catalogue complet</a>
     </section>
 
-    <!-- Partenaires -->
-    <section class="partners" id="partenaires">
-        <h2 class="section-title">NOS PARTENAIRES</h2>
+    <!-- SECTION TÉMOIGNAGES -->
+    <section class="partners" id="temoignages">
+        <h2 class="section-title">Ils nous font confiance</h2>
         <div class="partners-grid">
             <div class="partner-card">
-                <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                    alt="Chocolaterie" class="partner-img">
+                <img src="https://images.unsplash.com/photo-1590845947676-fa2576f401d2" alt="Chocolaterie"
+                    class="partner-img">
                 <h3>CHOCOLATERIE DUVAL</h3>
                 <p>Notre fournisseur exclusif de chocolat grand cru depuis 2015</p>
                 <a href="#" class="partner-link">Visiter le site →</a>
             </div>
             <div class="partner-card">
-                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                    alt="Verger" class="partner-img">
+                <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a" alt="Verger"
+                    class="partner-img">
                 <h3>VERGER DES ALPILLES</h3>
                 <p>Fruits bio de saison cultivés en Provence</p>
                 <a href="#" class="partner-link">Visiter le site →</a>
             </div>
             <div class="partner-card">
-                <img src="https://images.unsplash.com/photo-1519683109079-d5f539e1542f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                    alt="Crèmerie" class="partner-img">
+                <img src="https://images.unsplash.com/photo-1519683109079-d5f539e1542f" alt="Crèmerie"
+                    class="partner-img">
                 <h3>CRÈMERIE BOVETTI</h3>
                 <p>Beurre et crème fraîche d'exception</p>
                 <a href="#" class="partner-link">Visiter le site →</a>
             </div>
-            <div class="partner-card">
-                <img src="https://images.unsplash.com/photo-1584466977773-e625c37cdd50?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-                    alt="Équipement" class="partner-img">
-                <h3>MATÉRIEL PRO</h3>
-                <p>Notre partenaire pour les outils de pâtisserie haut de gamme</p>
-                <a href="#" class="partner-link">Visiter le site →</a>
-            </div>
         </div>
     </section>
-    <div class="intro-content">
-        <p>Exigez l'excellence en tant que restaurateur.</p>
-        <br>
-        <a href="./formulaire/index.html" class="btn">DEMANDER LE CATALOGUE</a>
-    </div>
-    <!-- Footer -->
+
+    <!-- CTA FINAL -->
+    <section class="intro">
+        <div class="intro-content">
+            <h2>Un dessert, une signature.</h2>
+            <p>Faites passer votre carte à un autre niveau.</p>
+            <a href="./formulaire/index.html" class="btn">📥 Demander le catalogue</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>CONTACT</h3>
-                <p><i class="fas fa-map-marker-alt"></i> 22 Rue Gourmande, Pornic</p>
-                <p><i class="fas fa-phone"></i> +33 6 12 34 56 78</p>
-                <p><i class="fas fa-envelope"></i> contact@golden-dessert.com</p>
+                <h3>Nous contacter</h3>
+                <form action="https://formspree.io/f/mdkzkyob" method="POST" class="footer-form">
+                    <input type="email" name="email" placeholder="Votre e-mail" required />
+                    <textarea name="message" placeholder="Votre message" rows="4" required></textarea>
+                    <button type="submit" class="btn">Envoyer</button>
+                </form>
             </div>
             <div class="footer-section">
-                <h3>HORAIRES</h3>
-                <p>Mardi - Samedi: 10h - 19h</p>
-                <p>Dimanche - Lundi: Fermé</p>
-                <p><a href="#" class="allergenes-link">Liste des allergènes</a></p>
+                <h3>Coordonnées</h3>
+                <p><strong>GOLDEN DESSERT</strong></p>
+                <p>5 rue de la Petite Meilleraie</p>
+                <p>44840 Les Sorinières</p>
+                <p>goldendessert44840@gmail.com</p>
+                <p>06 78 44 28 07</p>
+                <p>07 81 02 11 89</p>
             </div>
             <div class="footer-section">
-                <h3>SUIVEZ-NOUS</h3>
+                <h3>Suivez-nous</h3>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
         </div>
         <div class="copyright">
-            <p><a href="https://github.com/berru-g/">Dev by berru-g &copy;</a> TOUS DROITS RÉSERVÉS.</p>
+            <p>© 2025 Golden Dessert — Dev by <a href="https://gael-berru.netlify.app/">Berru-g</a></p>
         </div>
     </footer>
 
     <script>
-        // Chargement de la page
-        window.addEventListener('load', function () {
+        window.addEventListener('load', () => {
             const loader = document.querySelector('.loader');
-            setTimeout(function () {
-                loader.classList.add('fade-out');
-            }, 1500);
+            setTimeout(() => loader.classList.add('fade-out'), 1500);
         });
-
-        // Menu hamburger
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links li');
+        const links = document.querySelectorAll('.nav-links a');
 
-        hamburger.addEventListener('click', function () {
+        hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
             hamburger.classList.toggle('toggle');
         });
@@ -211,27 +173,11 @@
             });
         });
 
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', e => {
                 e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
-        });
-
-        // Animation au scroll
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.padding = '0.8rem 5%';
-                nav.style.background = 'rgba(13, 13, 13, 0.98)';
-            } else {
-                nav.style.padding = '1rem 5%';
-                nav.style.background = 'rgba(18, 18, 18, 0.95)';
-            }
         });
     </script>
 </body>
