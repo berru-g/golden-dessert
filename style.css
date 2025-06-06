@@ -17,8 +17,16 @@
 
 
 body {
-    background-image: linear-gradient(to top, #c9a769 0%, #000000 100%);
-    color: #e0e0e0;
+    background-color: #000;
+    /* Couleur de fond de base */
+    background-image:
+        linear-gradient(to top, rgba(201, 167, 105, 0.223), rgba(0, 0, 0, 0.815)),
+        url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    /*https://www.transparenttextures.com/*/
+    color: var(--light-1);
     line-height: 1.6;
     overflow-x: hidden;
     /*cursor: url('./pocheadouille.png'), auto;*/
@@ -272,32 +280,40 @@ nav {
 .presentation-text {
     flex: 1;
 }
+
 /*test pourquoi nous*/
 
 .section.light {
-  background: transparent;
-  color: #111;
+    background: transparent;
+    color: #111;
 }
 
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#atouts {
+    background-color: #1a1a1a;
+    background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .feature {
-  max-width: 300px;
-  background: #f4f4f4;
-  padding: 2rem;
-  border-radius: 12px;
-  color: #111;
-  transition: box-shadow 0.3s;
+    max-width: 300px;
+    background: #f4f4f4;
+    padding: 2rem;
+    border-radius: 12px;
+    color: #111;
+    transition: box-shadow 0.3s;
 }
 
 .feature:hover {
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 /*fin de teste*/
 
 .section-title {
@@ -556,7 +572,7 @@ footer {
         border-left: 1px solid #333;
         border-radius: 12px 0 0 12px;
     }
-    
+
 
 
     .nav-links li {
