@@ -96,12 +96,12 @@
 
 <body>
 
-     <!--Loader--> 
+    <!--Loader-->
     <div class="loader">
         <img src="./golden-dessert-logo.png" alt="Golden Dessert" />
     </div>
 
-     <!--Navigation -->
+    <!--Navigation -->
     <nav>
         <div class="logo-container">
             <img src="./golden-dessert-logo.png" alt="LogoGD" class="logo-img" />
@@ -120,7 +120,7 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="intro">
+    <section class="intro" data-gsap>
         <div class="intro-content">
             <h1>Golden Dessert</h1>
             <p>RESERVE AUX PROFESSIONEL. Des créations haut de gamme prêtes à servir pour restaurateurs exigeants.</p>
@@ -129,7 +129,7 @@
     </section>
 
     <!-- SECTION PROBLÈME / SOLUTION -->
-    <section class="presentation">
+    <section class="presentation" data-gsap>
         <div class="presentation-text">
             <h2 class="section-title">Un manque de main d'œuvre en cuisine ?</h2>
             <p>Golden Dessert est né d'une réalité du terrain : le besoin croissant de solutions fiables et haut de
@@ -143,7 +143,7 @@
         </div>
     </section>
 
-    <section class="gallery" id="atouts">
+    <section class="gallery" id="atouts" data-gsap>
         <h2 class="section-title">Pourquoi nous choisir ?</h2>
         <div class="features">
             <div class="feature">
@@ -162,7 +162,7 @@
     </section>
 
     <!-- SECTION PRODUITS -->
-    <section class="gallery" id="produits">
+    <section class="gallery" id="produits" data-gsap>
         <h2 class="section-title">Quelques créations phares</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
@@ -183,7 +183,7 @@
     </section>
 
     <!-- SECTION TÉMOIGNAGES -->
-    <section class="partners" id="temoignages">
+    <section class="partners" id="temoignages" data-gsap>
         <h2 class="section-title">Ils nous font confiance</h2>
         <div class="partners-grid">
             <div class="partner-card">
@@ -211,8 +211,8 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="intro">
-        <div class="intro-content">
+    <section class="cta-final" data-gsap>
+        <div class="cta-final-content">
             <h2>Un dessert, une signature.</h2>
             <p>Faites passer votre carte à un autre niveau.</p>
             <a href="#contact" class="btn">Demander le catalogue</a>
@@ -309,6 +309,30 @@
         });
 
     </script>
+    <!--scroll gasp-->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray("[data-gsap]").forEach(elem => {
+            gsap.fromTo(elem,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1.2,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: elem,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    }
+                }
+            );
+        });
+    </script>
+
 </body>
 
 </html>
