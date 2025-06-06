@@ -272,6 +272,33 @@ nav {
 .presentation-text {
     flex: 1;
 }
+/*test pourquoi nous*/
+
+.section.light {
+  background: transparent;
+  color: #111;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.feature {
+  max-width: 300px;
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #111;
+  transition: box-shadow 0.3s;
+}
+
+.feature:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+/*fin de teste*/
 
 .section-title {
     font-size: 2rem;
