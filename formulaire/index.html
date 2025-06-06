@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,56 +8,34 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 </head>
-
 <body>
-
     <form id="contactForm">
         <img src="../golden-dessert-logo.png">
         <h2>Contactez-nous</h2>
         <p style="text-align: center; color:white;">Et recevez le catalogue automatiquement.</p>
-
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="Email" required />
-
         <label for="fullname">Nom complet</label>
         <input type="text" id="fullname" placeholder="Nom Prénom" required />
-
         <label for="statut">Vous êtes :</label>
         <select id="statut" required>
             <option value="">-- Choisissez une option --</option>
             <option value="restaurateur">Restaurateur</option>
             <option value="fournisseur">Fournisseur</option>
         </select>
-
-
         <label for="telephone">Téléphone</label>
         <input type="tel" id="telephone" placeholder="+33 6 12 34 56 78" />
-
         <label for="siteweb">Site Internet</label>
         <input type="url" id="siteweb" placeholder="https://votresite.com" />
-
         <label for="message">Message</label>
         <textarea id="message" rows="5" placeholder="Message" required></textarea>
-
         <button type="submit">Envoyer</button>
     </form>
-    <!--<form action="https://formspree.io/f/mjkrbalj" method="POST" class="contact-form">
-        <img src="../golden-dessert-logo.png">
-        <h2>Contactez-nous</h2>
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Votre mail" required>
-        <label for="message">Message</label>
-        <textarea name="message" placeholder="Votre message." required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>-->
     <br>
     <div class="return-link">
         <h2 style="margin-top:20px;font-size:1rem;"><a href="../index.html">← Revenir au site</a></h2>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module"></script>
-
 </body>
-
 </html>

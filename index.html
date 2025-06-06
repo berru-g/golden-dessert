@@ -14,7 +14,6 @@
     <!-- FAVICON -->
     <link rel="shortcut icon" href="golden-dessert-logo.png" />
     <link rel="apple-touch-icon" href="golden-dessert-logo.png" />
-
     <!-- OPEN GRAPH (réseaux sociaux) -->
     <meta property="og:title" content="Golden Dessert | Desserts premium pour restaurateurs" />
     <meta property="og:description"
@@ -23,7 +22,6 @@
     <meta property="og:url" content="https://golden-dessert.netlify.app//" />
     <meta property="og:image" content="https://golden-dessert.netlify.app//images/og-image.jpg" />
     <meta property="og:site_name" content="Golden Dessert" />
-
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Golden Dessert | Desserts premium pour restaurateurs" />
@@ -31,7 +29,6 @@
         content="Découvrez notre catalogue de desserts haut de gamme dédiés aux professionnels de la restauration." />
     <meta name="twitter:image" content="https://golden-dessert.netlify.app//images/og-image.jpg" />
     <meta name="twitter:site" content="@GoldenDessert" />
-
     <!-- JSON-LD SCHEMA ORG (SEO STRUCTURÉ) -->
     <script type="application/ld+json">
 {
@@ -74,13 +71,10 @@
 </script>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/three@0.155.0/examples/js/loaders/GLTFLoader.min.js"></script>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Playfair+Display:ital,wght@1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9BL2VMEP"></script>
     <script>
@@ -90,18 +84,12 @@
 
         gtag('config', 'G-3P9BL2VMEP');
     </script>
-
-
 </head>
-
 <body>
-
-    <!--Loader-->
     <div class="loader">
         <img src="./golden-dessert-logo.png" alt="Golden Dessert" />
     </div>
 
-    <!--Navigation -->
     <nav>
         <div class="logo-container">
             <img src="./golden-dessert-logo.png" alt="LogoGD" class="logo-img" />
@@ -119,7 +107,6 @@
         </ul>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="intro" data-gsap>
         <div class="intro-content">
             <h1>Golden Dessert</h1>
@@ -127,7 +114,6 @@
             <a href="#contact" class="btn">Demander le catalogue</a>
         </div>
     </section>
-
     <!-- SECTION PROBLÈME / SOLUTION -->
     <section class="presentation" data-gsap>
         <div class="presentation-text">
@@ -231,33 +217,7 @@
                     <button type="submit" class="btn">Envoyer</button>
                 </form>
             </div>
-            <script>
-                const form = document.getElementById('contact-form');
-
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault(); // Empêche l'envoi classique
-
-                    const formData = new FormData(form);
-
-                    try {
-                        const response = await fetch(form.action, {
-                            method: form.method,
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
-
-                        if (response.ok) {
-                            window.location.href = "https://www.canva.com/design/DAGkHyepW1w/bZeR3AoqZLTk09F7h-HMjg/edit?utm_content=DAGkHyepW1w&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"; // Redirige après succès
-                        } else {
-                            alert("Une erreur est survenue. Merci de réessayer.");
-                        }
-                    } catch (error) {
-                        alert("Erreur de connexion. Vérifiez votre réseau.");
-                    }
-                });
-            </script>
+      
             <div class="footer-section">
                 <h3>Coordonnées</h3>
                 <p><strong>GOLDEN DESSERT</strong></p>
@@ -279,60 +239,10 @@
             <p>© Golden Dessert | Dev by <a href="https://gael-berru.netlify.app/">Berru-g</a></p>
         </div>
     </footer>
-
-    <script>
-        window.addEventListener('load', () => {
-            const loader = document.querySelector('.loader');
-            setTimeout(() => loader.classList.add('fade-out'), 1000);
-        });
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-        const links = document.querySelectorAll('.nav-links a');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-        });
-
-        links.forEach(link => {
-            link.addEventListener('click', function () {
-                navLinks.classList.remove('nav-active');
-                hamburger.classList.remove('toggle');
-            });
-        });
-
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-    </script>
     <!--scroll gasp-->
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray("[data-gsap]").forEach(elem => {
-            gsap.fromTo(elem,
-                { opacity: 0, y: 40 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.2,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        toggleActions: "play none none none"
-                    }
-                }
-            );
-        });
-    </script>
-
+    <script src="script.js"></script>
+        
 </body>
-
 </html>

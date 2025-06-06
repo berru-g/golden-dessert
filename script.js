@@ -1,4 +1,4 @@
-// loader 3D
+/* loader 3D
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('dessertCanvas'), alpha: true });
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
         document.getElementById('loader-3d').style.pointerEvents = 'none';
     }, 2200);
 });
-
+*/
 
 //loader img smooth
 window.addEventListener('load', () => {
