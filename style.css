@@ -321,15 +321,16 @@ nav {
 
 .feature {
     max-width: 300px;
-    background: #f4f4f4;
+    background: #333;
     padding: 2rem;
     border-radius: 12px;
-    color: #111;
+    color: #f1f1f1;
     transition: box-shadow 0.3s;
 }
 
 .feature:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+    transform: translateY(-5px);
 }
 
 /*fin de teste*/
