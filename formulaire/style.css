@@ -13,9 +13,11 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #000000;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
     display: flex;
     justify-content: center;
     padding: 50px;
