@@ -38,9 +38,28 @@
 #### Devis final
 
 
-| Option                           | Hébergement + nom de domaine | Dév. (toi)     | **Total Année 1** |
+| Option                           | Hébergement + nom de domaine | Dév. (mtn)     | **Total Année 1** |
 | -------------------------------- | ---------------------------- | -------------- | ----------------- |
 | **Netlify + Formspree (Free)**   | ≈ 10 €                       | 500 €          | **≈ 510 €**       |
 | **O2Switch (site PHP complet)**  | 5 € × 12 + domaine inclus    | 500 €          | **≈ 560 €**       |
 | **Odoo SaaS (officiel)**         | 25 € × 12 + domaine ≈ 10 €   | 500 €          | **≈ 810 €**       |
 | **Odoo auto-hébergé (O2Switch)** | 5 € × 12 (serveur mutualisé) | 500 € + config | **≈ 650–800 €**   |
+
+
+### Devis client
+
+| **Option**                                                    | **Ce que vous obtenez**                                                                                                             | **Fonctionnalités**                                                                                                                                       | **Coût total estimé (1ère année)** |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| **Option 1 — Formulaire simple**  *(via Netlify + Formspree)* | Un site vitrine avec un formulaire de contact basique. Les messages sont envoyés directement par email sans stockage.               | - Réception directe des demandes par mail<br>- Page simple, rapide à charger<br>- Idéal pour un premier contact                                           | **≈ 510 €**                        |
+| **Option 2 — Site complet**  *(via O2Switch)*                 | Un site complet avec un vrai formulaire. Les messages sont enregistrés dans une base de données pour un suivi plus professionnel.   | - Enregistrement des contacts<br>- Emails personnalisés<br>- Redirection automatique<br>- Possibilité d’évolution (ex: espace client, catalogue protégé…) | **≈ 560 €**                        |
+| **Option 3 — Solution pro complète** *(via Odoo)*             | Un site + outil de gestion tout-en-un : formulaire, base de contacts, facturation, gestion de stock, tableau de suivi client (CRM). | - Site + formulaire intégré<br>- Fichier client centralisé<br>- Envoi de devis/factures<br>- Suivi commercial<br>- Gestion de stock si besoin             | **≈ 810 €**                        |
+
+🧠 Recommandations
+
+    🔹 Si vous voulez juste un site élégant avec formulaire de contact : Option 1 est parfaite pour démarrer.
+
+    🔸 Si vous voulez une base de données de clients, préparer l’avenir, ou ajouter des fonctions plus poussées : choisissez l’Option 2.
+
+    🔥 Si vous voulez une vraie solution pro (CRM, devis, stock, catalogue, relance client) : Option 3 avec Odoo est la plus complète.
+
+💬 Tous les prix incluent mon travail de développement, design, configuration et accompagnement.
