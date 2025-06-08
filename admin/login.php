@@ -22,8 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <style>
         body { font-family: sans-serif; background: #f4f4f4; display:flex; justify-content:center; align-items:center; height:100vh; }
         form { background:white; padding:2rem; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
-        input { padding:10px; margin-top:10px; width:100%; }
-        button { margin-top:15px; padding:10px; width:100%; background:#007BFF; color:white; border:none; }
+        input { padding:10px; margin-top:10px; width:100%; border-radius:10px; }
+        button { margin-top:15px; padding:10px; width:100%; background:#007BFF; color:white; border:none; border-radius:10px;}
     </style>
 </head>
 <body>

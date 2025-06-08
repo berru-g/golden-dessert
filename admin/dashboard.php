@@ -26,31 +26,37 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Admin - Messages reçus</title>
-    <style>
-        body { font-family: sans-serif; margin: 2rem; background: #fafafa; }
-        h2 { margin-bottom: 20px; }
-        table { border-collapse: collapse; width: 100%; background:white; box-shadow:0 0 5px rgba(0,0,0,0.1); }
-        th, td { border: 1px solid #ccc; padding: 12px; text-align: left; }
-        th { background: #007BFF; color: white; }
-        tr:nth-child(even) { background: #f9f9f9; }
-        a.logout { float: right; color: red; }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <h2>📬 Messages reçus <a class="logout" href="logout.php">Se déconnecter</a></h2>
-    <table>
+    <h2>
+        📬 Dashboard by berru-g 
+        <a class="logout-btn" href="logout.php">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+    </h2>
+    
+    <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Rechercher...">
+    </div>
+    
+    <div class="table-container">
+    <table id="messagesTable">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Statut</th>
-                <th>Téléphone</th>
-                <th>Site web</th>
-                <th>Message</th>
+                <th data-column="0">Date</th>
+                <th data-column="1">Nom</th>
+                <th data-column="2">Email</th>
+                <th data-column="3">Statut</th>
+                <th data-column="4">Téléphone</th>
+                <th data-column="5">Site web</th>
+                <th data-column="6">Message</th>
             </tr>
         </thead>
         <tbody>
+
             <?php foreach ($messages as $msg): ?>
             <tr>
                 <td><?= htmlspecialchars($msg['created_at'] ?? '') ?></td>
@@ -64,5 +70,13 @@ try {
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
+
+    <div class="pagination" id="pagination">
+        <button id="prevBtn" disabled>Précédent</button>
+        <div id="pageNumbers"></div>
+        <button id="nextBtn">Suivant</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
