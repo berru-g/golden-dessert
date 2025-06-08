@@ -1,22 +1,53 @@
 <?php
 session_start();
 
-$mdp_admin = 'mdp'; // à cacher via la lib PHP dotenv ou à la main dans O2switch... 
-// Configuration > Variables d'environnement > variable "ADMIN_PASSWORD=mdp"
-// $mdp_admin = getenv('ADMIN_PASSWORD');
-// + hash
-// sleep(2); // Ralentit les attaques brute-force. Penser à limiter les tentatives avec session ou blocage IP après X essais
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['password'] === $mdp_admin) {
+// Charge la config
+$config = require __DIR__ . '/config.php';
+
+// Initialise le compteur de tentatives si inexistant
+if (!isset($_SESSION['login_attempts'])) {
+    $_SESSION['login_attempts'] = 0;
+    $_SESSION['last_attempt_time'] = 0;
+}
+
+// Vérifie si l'utilisateur est bloqué
+$block_duration = 1800; // 30 minutes en secondes
+if ($_SESSION['login_attempts'] >= 3 && (time() - $_SESSION['last_attempt_time']) < $block_duration) {
+    $remaining_time = $block_duration - (time() - $_SESSION['last_attempt_time']);
+    $error = "Trop de tentatives. Réessayez dans ".gmdate("i\m s\s", $remaining_time);
+} 
+else if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Réinitialise le compteur si le délai est expiré
+    if ((time() - $_SESSION['last_attempt_time']) > $block_duration) {
+        $_SESSION['login_attempts'] = 0;
+    }
+
+    if (password_verify($_POST['password'], $config['admin_password_hash'])) {
+        // Réussite : réinitialise le compteur
+        $_SESSION['login_attempts'] = 0;
         $_SESSION['admin_logged_in'] = true;
         header('Location: dashboard.php');
         exit();
     } else {
-        $error = "Mot de passe incorrect.";
+        // Échec : incrémente le compteur
+        $_SESSION['login_attempts']++;
+        $_SESSION['last_attempt_time'] = time();
+        $remaining_attempts = 3 - $_SESSION['login_attempts'];
+        
+        $error = "Mot de passe incorrect. ";
+        $error .= ($remaining_attempts > 0) 
+            ? "Il vous reste $remaining_attempts tentative(s)." 
+            : "Accès bloqué pour 30 minutes.";
+        
+        sleep(2); // Ralentit les attaques brute-force
     }
 }
 ?>
-
+<!--// à cacher via la lib PHP dotenv ou à la main dans O2switch... 
+// Configuration > Variables d'environnement > variable "ADMIN_PASSWORD=mdp"
+// $mdp_admin = getenv('ADMIN_PASSWORD');
+// + hash
+// sleep(2); // Ralentit les attaques brute-force. Penser à limiter les tentatives avec session ou blocage IP après X essais-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -173,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     
     <div class="footer">
-        <a href="gael-berru.netlify.app#contact">
+        <a href="https://gael-berru.netlify.app#contact" rel="noopener" target="_blank">
             <span>Interface développée par berru-g</span>
             <i class="fas fa-headset"></i>
         </a>

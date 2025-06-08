@@ -25,13 +25,13 @@ try {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Admin - Messages reçus</title>
+    <title>Admin - Base de données</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <h2>
-        📬 Dashboard by berru-g 
+        📬 Dashboard Admin 
         <a class="logout-btn" href="logout.php">
                 <i class="fa-solid fa-arrow-right-from-bracket"></i>
             </a>
@@ -76,6 +76,13 @@ try {
         <button id="prevBtn" disabled>Précédent</button>
         <div id="pageNumbers"></div>
         <button id="nextBtn">Suivant</button>
+    </div>
+    <br>
+    <div class="footer">
+        <a href="https://gael-berru.netlify.app#contact" rel="noopener" target="_blank">
+            <span>Interface développée par berru-g | Contacter l'assistance</span>
+            <i class="fas fa-headset"></i>
+        </a>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,3 +1,4 @@
-// admin/config.php
-$env = parse_ini_file(__DIR__ . '/.env');
-define('ADMIN_PASSWORD', $env['ADMIN_PASSWORD']);
+<?php
+return [
+    'admin_password_hash' => '$2y$10$JT9OqBwrAXk2p/uRFlv0EefT/phYvq8p/TpUhBcuIglThUv5a/IUi' // Colle le hash ici
+];
