@@ -1,5 +1,6 @@
-[functions]
-  node_bundler = "esbuild"
-
 [build]
   publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
