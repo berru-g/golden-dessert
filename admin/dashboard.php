@@ -10,7 +10,10 @@ $db = 'golden_dessert';
 $user = 'root';
 $pass = 'root'; // ou ton mot de passe MySQL O2Switch
 $charset = 'utf8mb4';
-
+//voir secur.md pour finir la config 
+//require __DIR__.'./db_config.php'; 
+//$dsn = "mysql:host={$config['host']};dbname={$config['db']};charset={$config['charset']}";
+//$pdo = new PDO($dsn, $config['user'], $config['pass']);
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db;charset=$charset", $user, $pass, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -61,10 +64,19 @@ try {
             <tr>
                 <td><?= htmlspecialchars($msg['created_at'] ?? '') ?></td>
                 <td><?= htmlspecialchars($msg['fullname']) ?></td>
-                <td><?= htmlspecialchars($msg['email']) ?></td>
+                <td>
+                   <a href="mailto:<?= htmlspecialchars($msg['email']) ?>" class="email-link">
+                    <i class="fas fa-envelope"></i> <?= htmlspecialchars($msg['email']) ?>
+                   </a>
+                </td>
                 <td><?= htmlspecialchars($msg['statut']) ?></td>
                 <td><?= htmlspecialchars($msg['telephone']) ?></td>
-                <td><?= htmlspecialchars($msg['siteweb']) ?></td>
+                <td>
+                   <a href="<?= htmlspecialchars($msg['siteweb']) ?>" class="email-link" rel="noopener"
+                target="_blank">
+                    <?= htmlspecialchars($msg['siteweb']) ?>
+                   </a>
+                </td>
                 <td><?= nl2br(htmlspecialchars($msg['message'])) ?></td>
             </tr>
             <?php endforeach; ?>

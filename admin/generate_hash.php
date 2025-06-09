@@ -1,3 +1,3 @@
 <?php
-$hash = password_hash('mdp', PASSWORD_DEFAULT);
+$hash = password_hash('goldendessert', PASSWORD_DEFAULT);
 echo "Hash généré : <strong>" . $hash . "</strong>";

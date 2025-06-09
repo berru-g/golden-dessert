@@ -118,7 +118,19 @@ tr:nth-child(even) {
 tr:hover {
     background-color: #f0f4ff;
 }
+.email-link {
+    color: #4361ee;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+.email-link:hover {
+    color: #3a56d4;
+    text-decoration: underline;
+}
 .pagination {
     display: flex;
     justify-content: center;
