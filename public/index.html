@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de contact</title>
+    <link href="../formulaire/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- public/index.html -->
+    <form id="contact-form">
+        <h2>Contactez-nous</h2>
+        <p style="text-align: center; color:white;">Et recevez le catalogue automatiquement.</p>
+        <img src="../golden-dessert-logo.png" alt="Logo Golden Dessert" />
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" placeholder="Votre nom" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Votre email" required />
+        <label for="site">site</label>
+        <input type="text" name="siteweb" placeholder="Votre site web" />
+        <label for="statut">Statut</label>
+        <select name="statut" required>
+            <option value="">Choisissez votre statut</option>
+            <option value="restaurateur">Restaurateur</option>
+            <option value="fournisseur">Fournisseur</option>
+        </select>
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <script>
+        document.querySelector('#contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const form = e.target;
+            const data = Object.fromEntries(new FormData(form).entries());
+
+            const res = await fetch('/.netlify/functions/sendForm', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            if (res.ok) {
+                window.location.href = '../formulaire/merci.html';
+            } else {
+                alert("Erreur lors de l'envoi");
+            }
+        });
+    </script>
+    <div class="return-link">
+        <h2 style="margin-top:20px;font-size:1rem;"><a href="../index.html">← Revenir au site</a></h2>
+    </div>
+</body>
+
+</html>
