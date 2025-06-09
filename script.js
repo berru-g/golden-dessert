@@ -1,35 +1,3 @@
-/* loader 3D
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('dessertCanvas'), alpha: true });
-renderer.setSize(300, 300);
-camera.position.z = 3;
-
-const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
-scene.add(light);
-
-const loader = new THREE.GLTFLoader();
-loader.load('./chocolate_cake.glb', (gltf) => {
-    const model = gltf.scene;
-    model.scale.set(1.2, 1.2, 1.2);
-    scene.add(model);
-
-    const animate = () => {
-        requestAnimationFrame(animate);
-        model.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    };
-    animate();
-});
-
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('loader-3d').style.opacity = '0';
-        document.getElementById('loader-3d').style.pointerEvents = 'none';
-    }, 2200);
-});
-*/
-
 //loader img smooth
 window.addEventListener('load', () => {
     const loader = document.querySelector('.loader');
@@ -87,7 +55,7 @@ form.addEventListener('submit', async (e) => {
     }
 });
 
-// animation scroll via GASP
+// animation scroll via GASP  
 gsap.registerPlugin(ScrollTrigger);
 
         gsap.utils.toArray("[data-gsap]").forEach(elem => {
