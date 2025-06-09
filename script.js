@@ -4,6 +4,26 @@ window.addEventListener('load', () => {
     setTimeout(() => loader.classList.add('fade-out'), 1000);
 });
 
+// animation scroll via GASP  
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray("[data-gsap]").forEach(elem => {
+    gsap.fromTo(elem,
+        { opacity: 0, y: 40 },
+        {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: elem,
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        }
+    );
+});
+
 //menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -28,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-//redirection after mail
+/*redirection after mail
 const form = document.getElementById('contact-form');
 
 form.addEventListener('submit', async (e) => {
@@ -54,23 +74,4 @@ form.addEventListener('submit', async (e) => {
         alert("Erreur de connexion. Vérifiez votre réseau.");
     }
 });
-
-// animation scroll via GASP  
-gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray("[data-gsap]").forEach(elem => {
-            gsap.fromTo(elem,
-                { opacity: 0, y: 40 },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1.2,
-                    ease: "power2.out",
-                    scrollTrigger: {
-                        trigger: elem,
-                        start: "top 80%",
-                        toggleActions: "play none none none"
-                    }
-                }
-            );
-        });
+*/
