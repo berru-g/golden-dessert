@@ -1,7 +1,8 @@
 // netlify/functions/sendForm.js
-import { config } from 'dotenv';
-import { Client } from '@neondatabase/serverless';
-import nodemailer from 'nodemailer';
+const { config } = require('dotenv');
+const { Client } = require('@neondatabase/serverless');
+const nodemailer = require('nodemailer');
+
 
 config(); // charge .env
 
