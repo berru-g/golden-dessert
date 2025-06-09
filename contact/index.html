@@ -37,7 +37,7 @@
             const form = e.target;
             const data = Object.fromEntries(new FormData(form).entries());
 
-            const res = await fetch('/.netlify/functions/sendForm', {
+            const res = await fetch('../netlify/functions/sendForm', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
